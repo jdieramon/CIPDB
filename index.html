@@ -1,0 +1,191 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIPDB · Análisis de datos</title>
+
+    <style>
+        :root {
+            --ink: #1f2933;
+            --muted: #667085;
+            --accent: #315c72;
+            --accent-light: #eaf1f4;
+            --line: #dfe5e8;
+            --paper: #ffffff;
+            --background: #f7f8f7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        /* ---------- Cabecera ---------- */
+
+        header {
+            border-top: 5px solid var(--accent);
+            background: var(--paper);
+        }
+
+        .header-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 55px 28px 48px;
+        }
+
+        .institution {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: normal;
+            letter-spacing: -0.025em;
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            max-width: 680px;
+            margin: 20px 0 0;
+            color: var(--muted);
+            font-size: 1.15rem;
+        }
+
+        /* ---------- Contenido ---------- */
+
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 55px 28px 80px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: baseline;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .section-number {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+
+        /* ---------- Tarjetas ---------- */
+
+        .contents {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            position: relative;
+            display: block;
+            min-height: 245px;
+            padding: 34px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            color: var(--ink);
+            text-decoration: none;
+            transition:
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .card::after {
+            content: "→";
+            position: absolute;
+            right: 30px;
+            bottom: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(31, 41, 51, 0.08);
+        }
+
+        .card:hover::after {
+            transform: translateX(5px);
+        }
+
+        .card-number {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 28px;
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+            font-size: 1.55rem;
+            font-weight: normal;
+        }
+
+        .card p {
+            max-width: 430px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        /* ---------- Nota inferior ---------- */
+
+        .note {
+            margin-top: 45px;
+            padding: 22px 25px;
+            border-left: 3px solid var(--accent);
+            background: var(--accent-light);
+            color: #4b5d67;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- Pie ---------- */
+
+        footer {
+            border-top: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .footer-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+```
